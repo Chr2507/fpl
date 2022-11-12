@@ -1,0 +1,6 @@
+
+pandas
+streamlit
+requests
+plotly
+plotly_express
