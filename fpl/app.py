@@ -26,6 +26,11 @@ df = df.rename(columns={
     })
 
 
+df["total_points_benched"] = df.groupby(["manager"])["points_benched"].transform("cumsum")
+df["total_transfers"] = df.groupby(["manager"])["transfers"].transform("cumsum")
+df["total_transfer_cost"] = df.groupby(["manager"])["transfer_cost"].transform("cumsum")
+
+
 st.header("Interaktiv graf for FPL 2022/23")
 st.text("Fra drop down menuen kan du vælge mellem en række variable, der beskriver \nudviklingen henover sæsonen.")
 
