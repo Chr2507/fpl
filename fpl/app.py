@@ -1,7 +1,7 @@
 import streamlit as st
 import plotly_express as px
 
-from fpl.api_calls import get_combined_manager_history
+import fpl.api_calls #get_combined_manager_history
     
 managers_dict = {
     "Chistian": 1302722,
@@ -9,7 +9,7 @@ managers_dict = {
     "Andreas": 4306388,
 }
 
-df = get_combined_manager_history(managers_dict=managers_dict)
+df = fpl.api_calls.get_combined_manager_history(managers_dict=managers_dict)
 
 df = df.drop(columns=["rank_sort"])
 df["value"] = df["value"]/10
