@@ -4,9 +4,9 @@ import plotly_express as px
 from api_calls import get_combined_manager_history
     
 managers_dict = {
-    "Chistian": 1302722,
-    "Hans-Martin": 2584139,
-    "Andreas": 4306388,
+    "Chistian": 87918,
+    "Hans-Martin": 3410292,
+    "Andreas": 4212029,
 }
 
 df = get_combined_manager_history(managers_dict=managers_dict)
